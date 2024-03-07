@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  jenkins:
+    image: jenkins/jenkins:latest
+    ports:
+      - 8080:8080
+    container_name: my_jenkins
+    # если нужно подключить том
+    # volumes:
+    #   - jenkins_volume:/var/jenkins_home
+
+# volumes:
+#   jenkins_volume:
+#     # Если том не был создан
+#     driver: local
+#     # Если том создан вне compose
+#     external: true
+#     name: jenkins_volume
